@@ -37,10 +37,17 @@ public:
     ofxSpaceColonizationOptions options;
     vector<ofxSpaceColonizationLeaf> getLeaves() const;
 
+    //For getting created mesh - call "getMesh()"
+    //To save it as obj file - use addon ofxKu, module ofxKuGeomMeshUtils.h, function ofxKuSaveObjFile()
+    //Please compile in 64 bit for case of bigger objects
+
 private:
     void makeSureThatThereAreLeaves();
     vector<glm::vec3> leaves_positions;
     vector<ofxSpaceColonizationLeaf> leaves;
     vector<shared_ptr<ofxSpaceColonizationBranch>> branches;
+
+    //registering lines for exporting
+
 
 };
